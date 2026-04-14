@@ -6,48 +6,58 @@ const calculator = new CalculatorService();
 const terminal = readline.createInterface({ input, output });
 
 async function iniciarCalculadora() {
-    console.log('--- BIENVENIDO A MI CALCULADORA ---');
+    let continuar = true;
 
-    try {
-        const numero1Str = await terminal.question('Escribí el primer número: ');
-        const numero2Str = await terminal.question('Escribí el segundo número: ');
+    while (continuar) {
+        console.clear();
+        console.log('--- BIENVENIDO A MI CALCULADORA ---');
 
-        console.log('\nElegí la operación por su número:');
-        console.log('1. Sumar');
-        console.log('2. Restar');
-        console.log('3. Multiplicar');
-        console.log('4. Dividir');
+        try {
+            const numero1Str = await terminal.question('Escribí el primer número: ');
+            const numero2Str = await terminal.question('Escribí el segundo número: ');
 
-        const opcion = await terminal.question('\nOpción: ');
+            console.log('\nElegí la operación por su número:');
+            console.log('1. Sumar');
+            console.log('2. Restar');
+            console.log('3. Multiplicar');
+            console.log('4. Dividir');
 
-        const n1 = parseFloat(numero1Str);
-        const n2 = parseFloat(numero2Str);
+            const opcion = await terminal.question('\nOpción: ');
 
-        if (isNaN(n1) || isNaN(n2)) {
-            console.log('\n¡Error! Tenés que poner números válidos.');
-        } else {
+            const n1 = parseFloat(numero1Str);
+            const n2 = parseFloat(numero2Str);
 
-            const opciones: Record<string, string> = {
-                '1': 'sumar',
-                '2': 'restar',
-                '3': 'multiplicar',
-                '4': 'dividir'
-            };
+            if (isNaN(n1) || isNaN(n2)) {
+                console.log('\n¡Error! Tenés que poner números válidos.');
+            } else {
+                const opciones: Record<string, string> = {
+                    '1': 'sumar',
+                    '2': 'restar',
+                    '3': 'multiplicar',
+                    '4': 'dividir'
+                };
 
-            const operacion = opciones[opcion] || 'invalida';
-            const resultado = calculator.calcular(n1, n2, operacion);
+                const operacion = opciones[opcion] || 'invalida';
+                const resultado = calculator.calcular(n1, n2, operacion);
 
-            console.log(`\nEl resultado es: ${resultado}`);
+                console.log(`\nEl resultado es: ${resultado}`);
+            }
+
+            console.log('\n');
+            const respuesta = await terminal.question('¿Desea continuar? (S/N): ');
+            
+            if (respuesta.toLowerCase().trim() !== 's') {
+                continuar = false;
+                console.log('\n¡Gracias por usar la calculadora!');
+            }
+
+        } catch (error) {
+            console.log('Hubo un problema:', error);
+            continuar = false;
         }
-
-        console.log('\n');
-        await terminal.question('Presioná una tecla para continuar...');
-
-    } catch (error) {
-        console.log('Hubo un problema:', error);
-    } finally {
-        terminal.close();
     }
+
+    terminal.close();
 }
 
 iniciarCalculadora();
