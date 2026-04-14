@@ -10,6 +10,10 @@
     <img src="https://img.shields.io/badge/👤%20Agustín%20Santinelli-agussantinelli-000000?style=for-the-badge&logo=github&logoColor=white" alt="Agus"/>
   </a>
 
+  <a href="https://github.com/martin-ratti" target="_blank">
+    <img src="https://img.shields.io/badge/👤%20Martín%20Ratti-martin--ratti-000000?style=for-the-badge&logo=github&logoColor=white" alt="Martin"/>
+  </a>
+
 </div>
 
 <div align="center">
@@ -136,14 +140,16 @@ npm test
 
 <hr />
 
-<h2>📬 Contacto</h2>
+<h2>📬 Autores</h2>
 
 <div align="center">
   
-  <img src="https://img.shields.io/badge/Autor-Agustín%20Santinelli-2b3137?style=for-the-badge&logo=person&logoColor=white" alt="Autor"/>
-
   <a href="https://github.com/agussantinelli" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-@agussantinelli-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+    <img src="https://img.shields.io/badge/Agustín%20Santinelli-181717?style=for-the-badge&logo=github&logoColor=white" alt="Agus GitHub"/>
+  </a>
+
+  <a href="https://github.com/martin-ratti" target="_blank">
+    <img src="https://img.shields.io/badge/Martín%20Ratti-181717?style=for-the-badge&logo=github&logoColor=white" alt="Martin GitHub"/>
   </a>
 
 </div>
