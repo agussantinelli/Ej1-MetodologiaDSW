@@ -23,9 +23,6 @@
   <img src="https://img.shields.io/badge/npm-Package%20Manager-CB3837?style=for-the-badge&logo=npm&logoColor=white" alt="npm Badge"/>
 </div>
 
-<div align="center">
-  <img src="https://img.shields.io/badge/Copyright-All_Rights_Reserved-red?style=for-the-badge&logo=copyright&logoColor=white" alt="Copyright Badge"/>
-</div>
 <hr/>
 
 <h2>🎯 Objetivo del proyecto</h2>
